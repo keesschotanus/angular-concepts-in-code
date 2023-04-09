@@ -1,0 +1,58 @@
+<p-tabView>
+  <p-tabPanel header="readme">
+    <h1>Form Validation (Reactive)</h1>
+    <p>
+      Building upon the basic form, this form adds validation.
+      Previously you added the required attribute to the input items on your form.
+      Using the Reactive approach, you will have to define this as a Validator,
+      for example:<br>
+      <code>'username': new FormControl(null, Validators.required)</code><br>
+      You can also define an array of Validators like this:<br>
+      <code>'password': new FormControl(null, [Validators.required, Validators.minLength(6)])</code><br>
+      So in general, validation is done using Typescript.
+    </p>
+
+    <h2>Access a FormControl in your html component</h2>
+    <p>
+      There are two approaches to getting access to your FormControl objects.
+      The first is to reference the form and then get the FormControl like this:<br>
+      <code>*ngIf="signupForm.get('password').invalid &amp;&amp; signupForm.get('password').touched"</code><br>
+      The second is to make the FormControl you need to access, accessible from your component.
+      So in your component declare your FormControl like this:<br>
+      <code>emailFormControl: FormControl;</code><br>
+      And the initialize it like this:<br>
+      <code>this.emailFormControl = new FormControl(null, [Validators.required, this.emailDotComValidator]);</code><br>
+      You should now be able to access it in your HTML code like this:<br>
+      <code>*ngIf="emailFormControl.errors.required"</code>
+    </p>
+
+    <h2>Custom validator</h2>
+    <p>
+      The component contains a custom validator, that checks that the email address is a dot com address.
+      The method signature looks like this:<br>
+      <code>emailDotComValidator(formControl: FormControl): {{ '{' }}[key: string]: string{{ '}' }}</code><br>
+      It accepts a FormControl and returns a key (string)/value pair (in this case the value is a string as well).
+      A validator should return nothing at all or null when there is no validation error.
+      When validation fails, it shoud return a key value pair, where the key (string) is the error code,
+      and the value may be the error message.
+      Note that the HTML code demonstrates how to show the different error messages.
+    </p>
+
+    <h2>Dynamic FormControls</h2>
+    <p>
+      The form allows you to enter multiple languages, dynamically.
+      Notice the <code>formArrayName="languages"</code> in the HTML code.
+      It links to: <code>languages': new FormArray([])</code> in the component.
+      The <code>onAddLanguage</code> method actually adds a new FormControl.
+    </p>
+  </p-tabPanel>
+  <p-tabPanel header="form-reactive-validation.component.ts">
+    <pre><code class="prettyprint linenums">{{ componentSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="form-reactive-validation-component.html">
+    <pre><code class="prettyprint linenums">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="form-reactive-validation-component.css">
+    <pre><code class="prettyprint linenums">{{ cssSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

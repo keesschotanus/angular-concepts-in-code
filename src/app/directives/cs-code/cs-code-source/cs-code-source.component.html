@@ -1,0 +1,31 @@
+<p-tabView>
+    <p-tabPanel header="readme">
+      <h1>cs-code</h1>
+      <p>
+        The cs-code directive can be used to format source code.
+        It is an alternative to using &lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;
+      </p>
+      <p>
+        With pre and code you have to align you source code against the left margin,
+        to avoid getting superfluous spaces in your formatted code.
+        Not so with &lt;cs-code&gt; which allows you to properly indent your source.
+        The cs-code directive will take care of removing these spaces automatically.
+      </p>
+      <p>
+        Unfortunately it doesn't work at all since it can't be used with un-escaped accolades for example.
+        Nevertheless it is a good example of what directives are capable of.
+      </p>
+      <p>
+        Usage:<br>
+        &lt;cs-code&gt;<br>
+        &nbsp;&nbsp;Your source code nicely indented here.<br>  
+        &lt;/cs-code&gt;
+      </p>
+    </p-tabPanel>
+    <p-tabPanel header="cs-code.component.html">
+        <pre><code class="prettyprint linenums">{{ htmlSource }}</code></pre>
+      </p-tabPanel>
+      <p-tabPanel header="cs-code.directive.ts">
+      <pre><code class="prettyprint linenums">{{ directiveSource }}</code></pre>
+    </p-tabPanel>
+  </p-tabView>

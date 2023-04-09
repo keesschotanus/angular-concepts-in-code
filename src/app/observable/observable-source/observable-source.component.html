@@ -1,0 +1,33 @@
+<p-tabView>
+  <p-tabPanel header="readme">
+    <h1>Observable/Observer</h1>
+    <p>
+      Observable belongs to the rxjs package, but Angular heavily depends on it.
+    </p>
+    <h2>Fibonacci Observable</h2>
+    <p>
+      In this demo, you can subscribe to a FibonacciObservable.
+      It will show you the Fibonacci numbers.
+      You can subscribe multiple times if you want to you.
+      Just check out the console to see the actual numbers.
+    </p>
+    <p>
+      Notice what happens when you subscribe and then move away from the page.
+      Your subscription is still active, but you can't unsubscribe anymore.
+      Therefore it is good practice to remove your subscriptions in the onDestroy() method.
+    </p>
+
+    <h1>Subject</h1>
+    <p>
+      Be sure to check-out the Subject component.
+      It is both Observer and Observable.
+      Use it in your code instead of the event emitter. 
+    </p>
+  </p-tabPanel>
+  <p-tabPanel header="observable.component.ts">
+    <pre><code class="prettyprint linenums">{{ componentSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="observable.component.html">
+    <pre><code class="prettyprint linenums">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

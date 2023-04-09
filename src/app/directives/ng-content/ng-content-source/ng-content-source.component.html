@@ -1,0 +1,52 @@
+<p-tabView>
+    <p-tabPanel header="readme">
+      <h1>ng-content</h1>
+      <p>
+        Normally when you use a component like this:
+      </p>
+      <pre class="prettyprint"><code>
+        &lt;app-panel&gt;
+          &lt;p&gt;Content&lt;/p&gt;
+        &lt;/app-panel&gt;
+      </code></pre>
+      <p>
+        The complete content is removed by angular.
+        ng-content allows you to insert content from the parent component into the child component.
+        I created a simple panel component to demonstrate this.
+        Check out the source of ng-content-panel.component.html.
+        You should see this code for the header:
+      </p>
+      <pre>&lt;ng-content select="[facet=header]"&gt;&lt;/ng-content&gt;</pre>
+      <p>For the body you should simply see:</p>
+      <pre>&lt;ng-content&gt;&lt;/ng-content&gt;</pre>
+      <p>
+        Note that there is no selector for the body of the panel.
+        To use the panel, use code similar to this:
+      </p>
+      <pre><code>
+        &lt;app-ng-content-panel&gt;
+          &lt;h1 facet="header"&gt;This is the header&lt;/h1&gt;
+          &lt;p&gt;This is the body&lt;/p&gt;
+        &lt;/app-ng-content-panel&gt;
+      </code></pre>
+      <p>
+        Notice that the header requires facet="header" where the body is included by default.
+      </p>
+      <h2>Selectors</h2>
+      <p>
+        Instead of using an attribute selector you could use an HTML element selector,
+        but angular would not recognize it.
+        The result would be: "Unhandled Promise rejection: Template parse errors: 'element-name' is not a known element.
+        You can change te schema metadata property in your module if you still want to select an element.
+      </p>
+    </p-tabPanel>
+    <p-tabPanel header="ng-content.component.html">
+      <pre><code class="prettyprint">{{ htmlSource }}</code></pre>
+    </p-tabPanel>
+    <p-tabPanel header="ng-content-panel.component.html">
+      <pre><code class="prettyprint">{{ htmlPanelSource }}</code></pre>
+    </p-tabPanel>
+    <p-tabPanel header="ng-content-panel.component.css">
+      <pre><code class="prettyprint">{{ cssPanelSource }}</code></pre>
+    </p-tabPanel>
+  </p-tabView>

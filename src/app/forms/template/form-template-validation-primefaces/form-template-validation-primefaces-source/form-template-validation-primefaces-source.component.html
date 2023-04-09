@@ -1,0 +1,28 @@
+<p-tabView>
+  <p-tabPanel header="readme">
+    <h1>Form validation using Primefaces (Template Driven)</h1>
+    <p>
+      Compared to the Basic Primefaces (Template Driven) Form, this form adds validation.
+      Additionally it shows how to use the message service.
+      You can see it in action when you submit the form.
+    </p>
+
+    <h2>Differences between this form and the basic form</h2>
+    <p>
+      The differences are comparable to the differences between the basic form and the validation form,
+      both non-Primefeaces that is.
+      Here too, you will add the disabled attribute to the submit button and you will use *ngIf,
+      to conditionally show error messages.
+    </p>  
+    <p>
+      The nice thing about PrimeFaces is that you don't have to define your own styles,
+      as they are all part of Primefaces.
+    </p>
+  </p-tabPanel>
+  <p-tabPanel header="form-template-validation-primefaces.component.ts">
+    <pre><code class="prettyprint linenums">{{ componentSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="form-template-validation-primefaces-component.html">
+    <pre><code class="prettyprint linenums">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

@@ -1,0 +1,18 @@
+<h1>LoggingService Demo</h1>
+<p>
+  Click a button log a message at the level indicated by the button.
+  You can change the log level using the drop-down.
+  Use the browser's console to check that a message is only logged if its level is at least as high as the current log level.
+</p>
+
+<div>
+  <label for="idLogLevel">Log level:</label>
+  <select (change)="onChangeLogLevel($event)" id="idLogLevel" [ngModel]="logLevel">
+    <option *ngFor="let logLevelKey of logLevelKeys" [value]="logLevelKey" [label]="logLevelLabels[+logLevelKey]"></option>
+  </select>
+  <button (click)="onTrace()" type="button">Trace</button>
+  <button (click)="onInfo()" type="button">Info</button>
+  <button (click)="onWarning()" type="button">Warning</button>
+  <button (click)="onError()" type="button">Error</button>
+  <button (click)="onFatal()" type="button">Fatal</button>
+</div>

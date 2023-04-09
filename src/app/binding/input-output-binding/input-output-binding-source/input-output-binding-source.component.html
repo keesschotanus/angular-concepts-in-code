@@ -1,0 +1,25 @@
+<p-tabView>
+  <p-tabPanel header="readme">
+    <h1>Input/Output binding</h1>
+    <p>
+      Shows how binding works using @Input() and @Output().
+      @Input() passes data from the parent to a child.
+      @Output() passes data from the child to the parent.
+    </p>
+  </p-tabPanel>
+  <p-tabPanel header="input-output-binding.component.html">
+    <pre><code class="prettyprint">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="input-output-binding-parent.component.ts">
+    <pre><code class="prettyprint">{{ parentComponentSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="input-output-binding-parent.component.html">
+    <pre><code class="prettyprint">{{ parentHtmlSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="input-output-binding-child.component.ts">
+    <pre><code class="prettyprint">{{ childComponentSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="input-output-binding-child.component.html">
+    <pre><code class="prettyprint">{{ childHtmlSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

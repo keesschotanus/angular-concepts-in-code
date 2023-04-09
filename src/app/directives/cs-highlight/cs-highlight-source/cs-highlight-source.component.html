@@ -1,0 +1,23 @@
+<p-tabView>
+  <p-tabPanel header="readme">
+    <h1>cs-highlight</h1>
+    <p>
+      The cs-highlight directive can be used to highlight elements.
+      It is for demonstration purposes only since you should be able to highlight using CSS.
+    </p>
+    <p>
+      Notice that @HostListener is used to bind to listen for events originating from the host.
+      @HostBinding is used to bind to a DOM property.
+    </p>
+    <p>
+      Usage: &lt;e cs-highlight&gt;content&lt;/e&gt; to use the default highlight color.<br>
+      &lt;e [cs-highlight]="color-expression"&gt;content&gt;&lt;/e&gt; to use your own color.<br>
+    </p>
+  </p-tabPanel>
+  <p-tabPanel header="cs-highlight.component.html">
+    <pre><code class="prettyprint linenums">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="cs-highlight.directive.ts">
+    <pre><code class="prettyprint linenums">{{ directiveSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

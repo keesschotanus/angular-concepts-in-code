@@ -1,0 +1,32 @@
+<p><p-tabView>
+  <p-tabPanel header="readme">
+    <h1>@ViewChild</h1>
+    <p>
+      @ViewChild can be used to inject a child component into a parent component.
+      In this particular example the child component is injected like this:
+    </p>
+    <pre><code>@ViewChild(ViewChildChildComponent) private childComponent: ViewChildChildComponent;</code></pre>
+    <p>
+      The parent now has access to the complete child component.
+      You may want to implement AfterViewInit to make sure that you don't access the child before it is rendered.
+    </p>
+    <p>
+      Instead of passing a child component, you may also pass in a local reference to any element in your HTML template.
+      So if your child's HTML contains: &lt;input ... #inputReference&gt;,
+      you may use @ViewChild in your parent component like this:
+    </p>
+    <pre><code>@ViewChild('inputReference') private childComponent: ElementRef;</code></pre>
+    <p>
+      Note that the type of the injected element is of type ElementRef which has a nativeElement property.
+    </p>
+  </p-tabPanel>
+  <p-tabPanel header="view-child.component.ts">
+    <pre><code class="prettyprint">{{ componentSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="view-child.component.html">
+    <pre><code class="prettyprint">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="view-child-child.component.ts">
+    <pre><code class="prettyprint">{{ childComponentSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

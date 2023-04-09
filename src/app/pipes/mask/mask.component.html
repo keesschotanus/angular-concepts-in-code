@@ -1,0 +1,33 @@
+<h1>Mask Pipe</h1>
+
+<div class="ui-g">
+  <div class="ui-g-12 ui-md-2">
+    <label for="idMask">Mask</label>
+  </div>
+  <div class="ui-g-12 ui-md-10">
+    <input
+      id="idMask"
+      [(ngModel)]="mask"
+      pInputText
+      type="text">
+  </div>
+  <div class="ui-g-12 ui-md-2">
+    <label for="idUnmaskedValue">Value</label>
+  </div>
+  <div class="ui-g-12 ui-md-10">
+    <input
+      id="idUnmaskedValue"
+      [(ngModel)]="unmaskedValue"
+      pInputText
+      type="text">
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12 ui-md-2">
+    <label>Masked ouput</label>
+  </div>
+  <div class="ui-g-12 ui-md-10">
+    #{{ getUnmaskedValue() | mask:getMask() }}#
+  </div>
+</div>

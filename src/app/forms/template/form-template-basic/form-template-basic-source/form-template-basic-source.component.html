@@ -1,0 +1,57 @@
+<p-tabView>
+  <p-tabPanel header="readme">
+    <h1>Basic Form (Template Driven)</h1>
+    <p>
+      This component shows a form with different input elements.
+      When you submit the form an NgForm object is written to the console.
+    </p>
+
+    <h2>The Form</h2>
+    <p>
+      The form definition has to look something like this:
+    </p>
+    <pre><code>&lt;form (ngSubmit)="onSubmitForm(theForm)" #theForm="ngForm"&gt;&lt;/form&gt;</code></pre>
+    <p>
+      Normally you submit a form using something like method="POST",
+      but this would send a request.
+      To submit the form Angular style, use the (ngSubmit) event handler.
+      Make sure to make the form available using a local reference.
+      In this example I used "#theForm"".
+      This Angular form is passed to the submit form handler that I named onSubmitForm.
+    </p>
+    <p>
+      Note: Instead of passing the form, you can also retrieve it in your component using:
+    </p>
+    <pre><code>@ViewChild('theForm') theForm: NgForm</code></pre>
+
+    <p>
+      Note: To use a Form, you have to import the Forms module.
+    </p>
+    <pre><code>
+      import {{ '{' }} FormsModule }} '}' }} from '@angular/forms';
+      ...
+      imports: [
+        ...,
+        FormsModule,
+        ...
+      ],
+      ...
+    </code></pre> 
+
+    <h2>The Input Elements</h2>
+    <p>
+      In order for Angular to see the input item you created as a form element,
+      the input item must have:
+    </p>
+    <ul>
+      <li>a name</li>
+      <li>the ngModel attribute</li>
+    </ul>
+  </p-tabPanel>
+  <p-tabPanel header="form-template-basic.component.ts">
+    <pre><code class="prettyprint linenums">{{ componentSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="form-template-basic-component.html">
+    <pre><code class="prettyprint linenums">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

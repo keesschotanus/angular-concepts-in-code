@@ -1,0 +1,17 @@
+/*
+ * Creates a panel look by:
+ * limiting the width of the panel
+ * Giving the panel a border
+ */
+.my-panel {
+    border: 1px solid black;
+    display: block;
+    max-width: fit-content;
+}
+
+/*
+ * Change the background color of the header and footer.
+ */
+.my-panel-header, .my-panel-footer {
+    background-color: lightgray;
+}

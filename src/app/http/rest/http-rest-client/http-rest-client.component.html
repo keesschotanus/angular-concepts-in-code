@@ -1,0 +1,48 @@
+<form [formGroup]="elementForm">
+  <div><label for="atomicNumber">Atom Number</label></div>
+  <div>
+    <input formControlName="atomicNumber" id="atomicNumber" type="text">
+    <button (click)="onGetElement()">Get the element</button>
+  </div>
+
+  <div><label for="symbol">Symbol</label></div>
+  <div>
+    <input formControlName="symbol" id="symbol" type="text">
+  </div>
+
+  <div><label for="name">Name</label></div>
+  <div>
+    <input formControlName="name" id="name" type="text">
+  </div>
+
+  <div><label for="weight">Weight</label></div>
+  <div>
+    <input formControlName="weight" id="weight" type="text">
+  </div>
+
+  <div><label for="group">Group</label></div>
+  <div>
+    <input formControlName="group" id="group" type="text">
+  </div>
+
+  <div><label for="period">Period</label></div>
+  <div>
+    <input formControlName="period" id="period" type="text">
+  </div>
+
+  <div><label for="block">Block</label></div>
+  <div>
+    <input formControlName="block" id="block" type="text">
+  </div>
+
+  <div><label for="electronConfiguration">Electron configuration</label></div>
+  <div>
+    <input formControlName="electronConfiguration" id="electronConfiguration" type="text">
+  </div>
+
+  <div>
+    <button (click)="onUpdateElement()">Update</button>
+    <button (click)="onCreateElement()">Create</button>
+    <span>HTTP code:</span>{{ httpErrorCode }}
+  </div>
+</form>

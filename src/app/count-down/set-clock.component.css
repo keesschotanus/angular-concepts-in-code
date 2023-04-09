@@ -1,0 +1,6 @@
+/*
+ * Align the button with the spinner controls.
+ */
+.ui-button {
+  vertical-align: middle;
+}

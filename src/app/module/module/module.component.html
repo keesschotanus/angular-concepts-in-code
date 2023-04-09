@@ -1,0 +1,9 @@
+<h1>Module</h1>
+
+<p>
+  This is the module component.
+  It has two nested components named ModuleFirstComponent and ModuleSecondComponent.
+</p>
+
+<a [routerLink]="['', {outlets: {main: ['module-first'], source: ['module-first-source']}}]">Go to component {{ 1 | roman}}</a>
+<a [routerLink]="['', {outlets: {main: ['module-second'], source: ['module-second-source']}}]">Go to component {{ 2 | roman}}</a>

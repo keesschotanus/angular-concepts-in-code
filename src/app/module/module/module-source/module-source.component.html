@@ -1,0 +1,65 @@
+<p-tabView>
+  <p-tabPanel header="readme">
+    <h1>Angular Module</h1>
+    <p>
+      This is a demonstration of a simple module.
+      Initially the module directory did not represent a module at all.
+      I turned it into a module and in the process described all individual steps,
+      to make this an actual Angular model.
+    </p>
+
+    <h2>Starting situation</h2>
+    <p>
+      Created a component with: ng g c module/module<br>
+      Nested two components like this:<br>
+      ng g c module/module/module-first<br>
+      ng g c module/module/module-second<br>
+      Both module-first and module-second, use the roman pipe.
+    </p>
+    <ul>
+      <li>@NgModule app.module.ts contains the Module components</li>
+      <li>Added the Module components to the menu in app.component.ts</li>
+      <li>Added the different routes to app-routing.module.ts</li>
+    </ul>
+
+    <h2>Converting the module directory to an actual module</h2>
+    <ol>
+      <li>Created a feature.module.ts file and turned this into a module
+        <ul>
+          <li>Added an import of the CommonModule</li>
+        </ul>
+      </li>
+      <li>Removed the Module components from the app.module.ts file and the corresponding imports</li>
+      <li>Created a new feature-routing.mdoule.ts file
+        <ul>
+          <li>Moved the module related routes from app-routing.module.ts in this file and removed the imports</li>
+        </ul>
+      </li>
+      <li>Imported the FeatureRoutingModule in feature.module.ts</li>
+      <li>Imported the FeatureRoutingModule in app.module.ts</li>
+    </ol>
+    <p>
+      When you now run the application, you will see the next error in the debug window of your browser:
+      Type RomanPipe is part of the declarations of 2 modules:<br>
+      FeatureModule and AppModule!
+      Please consider moving RomanPipe to a higher module that imports FeatureModule and AppModule.<br>
+      You can also create a new NgModule that exports and includes RomanPipe then import that NgModule in FeatureModule and AppModule.
+    </p>
+    <p>
+      I took the latter approach and created a new JosefSharedModule that exports the RomanPipe.
+      Both app.module.ts and feature.module.ts import the RomanPipe.
+    </p>
+  </p-tabPanel>
+  <p-tabPanel header="module.component.html">
+    <pre><code class="prettyprint">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="feature.module.ts">
+    <pre><code class="prettyprint">{{ featureModuleSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="feature-routing.module.ts">
+    <pre><code class="prettyprint">{{ featureRoutingModuleSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="josef-shared.module.ts">
+    <pre><code class="prettyprint">{{ sharedModuleSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

@@ -1,0 +1,20 @@
+/*
+ * Valid controls with a required attribute or class.
+ */
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948;
+}
+  
+/*
+ * Invalid controls, except the form itself (to prevent a border around the whole form.
+ */
+ .ng-invalid:not(form)  {
+  border-left: 5px solid #a94442;
+}
+
+/*
+ * Error message after the user has entered an invalid value.
+ */
+.input-error-message {
+  border: 1px solid red;
+}

@@ -1,0 +1,49 @@
+<h1>Data binding using @Input() and @Output()</h1>
+
+<p>
+  In <a routerLink="../data-binding">Data Binding</a> we bind to the right side of the binding declaration (source).
+  Every member of a source directive is automatically available for binding.
+  This section concentrates on binding to targets, which are directive properties on the left side of the binding declaration.
+  These directive properties must be declared as inputs or outputs.
+</p>
+
+<h2>@Input</h2>
+<p>
+  @Input() is used to pass information from a parent to a child.
+</p>
+<p>
+  At the bottom of this page you will see a list of books, displayed by the parent component.
+  You can click on a book, to make this the current book.
+  The parent component has a child component that is declared like this:<br>
+  &lt;app-input-output-binding-child <span class="highlight">[book]="getCurrentBook()"</span> (bookDeleted)="onBookDeleted($event)"&gt;&lt;/app-input-output-binding-child&gt;<br>
+  In the InputOutputBindingChildComponent, the book property is declared like this:
+</p>
+<pre><code>@Input()
+private book: Book;</code></pre>
+<p>
+  @Input() can also be used with setters.
+</p>
+<p>
+  @Input() accepts an alias.
+  If you pass an alias like: @Input('currentBook'), then you have to use [currentBook] in your template.
+</p>
+
+<h2>@Output</h2>
+
+<p>
+  Output properties expose event producers, such as EventEmitter objects.
+  They pass information from one component (the child) to another (the parent).
+</p>
+<p>
+  In this example clicking the "Delete" button results in emitting an event from the child to the parent.
+  The parent component has a child component that is declared like this:<br>
+  &lt;app-input-output-binding-child [book]="getCurrentBook()" <span class="highlight">(bookDeleted)="onBookDeleted($event)"</span>&gt;&lt;/app-input-output-binding-child&gt;<br>
+  The child component contains: "@Output() private bookDeleted = new EventEmitter&lt;Book&gt;();"
+  and the parent component contains the onBookDeleted(book: Book) method.
+</p>
+<p>
+  @Output accepts an alias.
+  If you pass an alias like: @Output('bookIsGone'), then you have to use (bookDeleted)="bookIsGone($event)" in your template.
+</p>
+
+<app-input-output-binding-parent></app-input-output-binding-parent>

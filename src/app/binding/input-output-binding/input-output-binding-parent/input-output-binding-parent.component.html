@@ -1,0 +1,10 @@
+<h2>Parent</h2>
+
+<ul>
+  <li *ngFor="let book of getBooks(); let bookIndex = index;" (click)=onSelectBook(bookIndex)>
+    {{book.getTitle()}} - {{book.getAuthor()}}
+  </li>
+</ul>
+
+<app-input-output-binding-child [book]="getCurrentBook()" (bookDeleted)="onBookDeleted($event)"></app-input-output-binding-child>
+

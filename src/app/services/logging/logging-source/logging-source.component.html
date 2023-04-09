@@ -1,0 +1,27 @@
+<p-tabView>
+  <p-tabPanel header="readme">
+    <h1>LoggingService</h1>
+    <p>
+      A generic service for logging.
+      To use the LoggingService, simply add it as a constructor parameter.
+      For example:
+    </p>
+    <pre><code>constructor(private loggingService: LoggingService) {{ '{' }} {{ '}' }}</code></pre>
+    <p>
+      Make sure that the LoggingService is provided.
+      Since all modules should make use of this generic service, app.module.ts is a good place to add the LoggingService.
+    </p>
+  </p-tabPanel>
+  <p-tabPanel header="logging.component.ts">
+    <pre><code class="prettyprint linenums">{{ componentSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="logging.component.html">
+    <pre><code class="prettyprint linenums">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="logging.service.ts">
+    <pre><code class="prettyprint linenums">{{ serviceSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="log-level.enum.ts">
+    <pre><code class="prettyprint linenums">{{ enumSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

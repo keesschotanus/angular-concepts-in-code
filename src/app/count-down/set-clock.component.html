@@ -1,0 +1,37 @@
+<h2>Set the clock</h2>
+
+<form name="setClockForm">
+  <div>
+    <label>hours</label>
+    <p-spinner
+      name="hours"
+      [min]="0"
+      [max]="24"
+      [maxlength]="2"
+      [size]="2"
+      type="number"
+      [(ngModel)]="hours">
+    </p-spinner>
+
+    <label>Minutes</label>
+    <p-spinner
+      id="minutes"
+      name="minutes"
+      [min]="0"
+      [max]="59"
+      [maxlength]="2"
+      [size]=2
+      type="number"
+      [(ngModel)]="minutes">
+    </p-spinner>
+    
+    <button
+      class="ui-button"
+      (click)="onStartCountDown()"
+      id="hours"
+      label="start"
+      pButton
+      type="button">
+    </button>
+  </div>
+</form>

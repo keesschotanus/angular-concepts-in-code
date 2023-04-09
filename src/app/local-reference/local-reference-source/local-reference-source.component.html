@@ -1,0 +1,30 @@
+<p-tabView>
+  <p-tabPanel header="readme">
+    <h1>Local Reference</h1>
+    <p>
+      A local reference can be used to allow a parent component, to access the child component.
+      This example contains two local references.
+    </p>
+    <p>
+      The first is a reference on the input item.
+      When you click the button, a reference to the input item is passed as a parameter to the onClick(...) method.
+    </p>
+    <p>
+      The second reference is added to the child component like this:
+    </p>
+    <pre><code>&lt;app-local-reference-child #childReference&gt;&lt;/app-local-reference-child&gt;</code></pre>
+    <p>
+      This allows you to use code like this in your parent template:
+    </p>
+    <pre><code>{{ '{' }}{{ '{' }} childReference.getValueFromChild() {{ '}' }}{{ '}' }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="local-reference.component.ts">
+    <pre><code class="prettyprint">{{ componentSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="local-reference.html">
+    <pre><code class="prettyprint">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="local-reference-child.component.ts">
+    <pre><code class="prettyprint">{{ childComponentSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

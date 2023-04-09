@@ -1,0 +1,6 @@
+<input type="text" #inputReference>
+<button (click)="onClick(inputReference)">Click</button>
+{{ getInputValue() }}<br>
+<!-- Since we have a reference to the child component, we can get a value from the child -->
+{{ childReference.getValueFromChild() }}
+<app-local-reference-child #childReference></app-local-reference-child>

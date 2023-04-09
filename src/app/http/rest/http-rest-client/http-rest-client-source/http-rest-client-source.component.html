@@ -1,0 +1,36 @@
+<p-tabView>
+  <p-tabPanel header="readme">
+    <h1>HTTP Client</h1>
+    <p>
+      Angular's HTTP client allows you to execute all the HTTP methods, like DELETE, GET, POST, PUT and PATCH.
+      Pay special attention to the firestore-periodic-table.service.ts file and http-rest-client.component.ts.
+      The former actually uses the HTTP client while the latter subscribes to the response.
+    </p>
+
+    <p>
+      To use http I imported the HttpModule in app.module.ts like this:<br>
+      <code>import {{ '{' }} HttpModule {{ '}' }} from '@angular/http';</code><br>
+      The service uses:<br>
+      <code>import {{ '{' }} Http, Response {{ '}' }} from '@angular/http';</code>
+    </p>
+
+    <p>
+      Note: This example uses Google's Cloud Firestore database.
+      The nice thing about this is that I can demonstrate my code everywhere since the database is always up and running.
+      The down side is that this database uses documents instead of javascript objects.
+      Other interfaces solve this problem but I wanted to use the REST interface in combination with the HTTP client.
+    </p>
+  </p-tabPanel>
+  <p-tabPanel header="http-rest-client.component.ts">
+    <pre><code class="prettyprint linenums">{{ componentSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="http-rest-client.component.html">
+    <pre><code class="prettyprint linenums">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="firestore-periodic-table.service.ts">
+    <pre><code class="prettyprint linenums">{{ serviceSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="periodic-table-element.ts">
+    <pre><code class="prettyprint linenums">{{ elementSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

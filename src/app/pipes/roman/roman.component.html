@@ -1,0 +1,41 @@
+<h1>Roman Pipe</h1>
+
+<div class="ui-g">
+  <div class="ui-g-12 ui-md-2">
+    <label for="idLatin">Latin input</label>
+  </div>
+  <div class="ui-g-12 ui-md-10">
+    <input
+      id="idLatin"
+      maxlength="4"
+      [(ngModel)]="latin"
+      pInputText
+      size="4"
+      type="text">
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12 ui-md-2">
+    <label>Roman ouput</label>
+  </div>
+  <div class="ui-g-12 ui-md-10">
+    {{ latin | roman }}
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12 ui-md-2">
+    <label>{{ '{' }}{{ '{' }} 123 | roman {{ '}' }}{{ '}' }}</label>
+  </div>
+  <div class="ui-g-12 ui-md-10">
+    {{ 123 | roman }}
+  </div>
+  <div class="ui-g-12 ui-md-2">
+    <label>{{ '{' }}{{ '{' }} '123' | roman {{ '}' }}{{ '}' }}</label>
+  </div>
+  <div class="ui-g-12 ui-md-10">
+    {{ '123' | roman }}
+  </div>
+</div>
+

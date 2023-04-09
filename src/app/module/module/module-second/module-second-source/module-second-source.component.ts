@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-module-second-source',
+  templateUrl: './module-second-source.component.html',
+})
+export class ModuleSecondSourceComponent {
+
+  htmlSource = `
+  <h1>Second component</h1>
+  <p>
+    Simply contains a link to go to the first component.
+    The link uses the "Roman Pipe".
+  </p>
+  <a [routerLink]="['', {outlets: {main: ['module'], source: ['module-source']}}]">Go to module component</a>
+  <a [routerLink]="['', {outlets: {main: ['module-first'], source: ['module-first-source']}}]">Go to component {{ 1 | roman}}</a>`;
+}

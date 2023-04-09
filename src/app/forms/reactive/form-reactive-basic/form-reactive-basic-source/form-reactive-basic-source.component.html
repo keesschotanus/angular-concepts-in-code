@@ -1,0 +1,43 @@
+<p-tabView>
+  <p-tabPanel header="readme">
+    <h1>Basic Form (Reactive)</h1>
+    <p>
+      This form builds upon the basic, template driven, form.
+    </p>
+
+    <p>
+      Note: To use a reactive Form, you have to import the ReactiveForms module.
+    </p>
+    <pre><code>
+      import {{ '{' }} ReactiveFormsModule }} '}' }} from '@angular/forms';
+      ...
+      imports: [
+        ...,
+        ReactiveFormsModule,
+        ...
+      ],
+      ...
+    </code></pre> 
+
+    <h2>Differences between this reactive form and its related, template driven form</h2>
+    <p>
+      The component is now quite different.
+      It needs to create the form from Typescript code.
+    </p>  
+    <p>
+      The HTML page is quite similar, but it too, requires some changes.
+    </p>
+    <ol>
+      <li>You need to add <code>[formGroup]="signupForm"</code> to the form</li>
+      <li>When submitting the form, you don't need to pass the form anymore</li>
+      <li>You have to add the formControlName attribute to all inputs</li>
+      <li>You can remove the ngModel attribute</li>
+    </ol>
+  </p-tabPanel>
+  <p-tabPanel header="form-reactive-basic.component.ts">
+    <pre><code class="prettyprint linenums">{{ componentSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="form-reactive-basic--component.html">
+    <pre><code class="prettyprint linenums">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

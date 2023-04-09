@@ -1,0 +1,49 @@
+<p-tabView>
+  <p-tabPanel header="readme">
+    <h1>Form Validation (Template Driven)</h1>
+    <p>
+      Building upon the basic form, this form adds validation.
+      Every FormControl and every Form maintains the following properties with an accompanying class name
+      between parenthesis. So the classname ng-invalid is added automatically to an inval field or form.
+    </p>
+    <ul>
+      <li>valid (ng-valid)/invalid (ng-invalid)</li>
+      <li>pristine (ng-pristine)/dirty (ng-dirty)</li>
+      <li>touched (ng-touched)/untouched (ng-untouched)</li>
+    </ul>
+
+    <h2>Use class names</h2>
+    <p>
+      Use css class names to show valid/invalid files.
+      The css source for example contains:
+    </p>
+    <pre><code>.ng-invalid:not(form)  {{ '{' }}
+      border-left: 5px solid #a94442;
+    {{ '}' }}</code></pre>
+    <p ng-non-bindable>
+      This shows all form controls (but not the form itself) with a red left border.
+      Note that the html source, contains two different examples of how to add an error message
+      to a form control that is invalid.
+      The first example uses binding to the [hidden] property.
+      The second example uses *ngIf.
+      Notice that the name and email field work differently due to the fact that one uses the pristine
+      propery, while the other uses touched.
+    </p>
+
+    <h2>Prevent submit of an invalid form</h2>
+    <p>
+      You can easily prevent a form from being submitted when one of its form controls is invalid.
+      For example like this:
+    </p>
+    <pre><code>&lt;button [disabled]="theForm.invalid" type="submit"&gt;Submit&lt;/button&gt;</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="form-template-validation.component.ts">
+    <pre><code class="prettyprint linenums">{{ componentSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="form-template-validation-component.html">
+    <pre><code class="prettyprint linenums">{{ htmlSource }}</code></pre>
+  </p-tabPanel>
+  <p-tabPanel header="form-template-validation-component.css">
+    <pre><code class="prettyprint linenums">{{ cssSource }}</code></pre>
+  </p-tabPanel>
+</p-tabView>

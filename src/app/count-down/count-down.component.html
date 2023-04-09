@@ -1,0 +1,32 @@
+<span class="hours">{{ hours }}</span>
+<span class="separator">:</span>
+<span class="minutes">{{ minutes }}</span>
+<span class="separator">:</span>
+<span class="seconds">{{ seconds }}</span>
+<hr>
+
+<button
+  (click)="onPause()"
+  class="btn-primary"
+  label="Pause"
+  *ngIf="running"
+  pButton
+  type="button">
+</button>
+
+<button
+  class="ui-button-success"
+  (click)="onResume()"
+  label="Resume"
+  *ngIf="!running && (hours > 0 || minutes > 0 || seconds > 0)"
+  pButton
+  type="button">
+</button>
+
+<button
+  class="ui-button-danger"
+  (click)="onCancel()"
+  label="Cancel"
+  pButton
+  type="button">
+</button>
