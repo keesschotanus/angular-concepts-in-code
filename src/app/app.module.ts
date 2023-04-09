@@ -7,7 +7,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from "./app-routing.module";
 
-import { JosefSharedModule } from './shared/josef-shared.module';
+import { SchotanusSharedModule } from './shared/schotanus-shared.module';
 
 /* Primeng components. */
 import { ButtonModule } from "primeng/button";
@@ -206,7 +206,6 @@ import { ObservableSourceComponent } from './observable/observable-source/observ
     FormsModule,
     HttpClientModule,
     InputTextModule,
-    JosefSharedModule,
     ListboxModule,
     MenubarModule,
     MessageModule,
@@ -214,6 +213,7 @@ import { ObservableSourceComponent } from './observable/observable-source/observ
     PasswordModule,
     RadioButtonModule,
     ReactiveFormsModule,
+    SchotanusSharedModule,
     SpinnerModule,
     TabViewModule
   ],

@@ -1,7 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 
-import { JosefSharedModule } from "../shared/josef-shared.module";
+import { SchotanusSharedModule } from "../shared/schotanus-shared.module";
 import { TabViewModule } from "primeng/tabview";
 
 import { ModuleComponent } from "./module/module.component";
@@ -24,7 +24,7 @@ import { FeatureRoutingModule } from "./feature-routing.module";
   imports: [
     CommonModule,
     FeatureRoutingModule,
-    JosefSharedModule,
+    SchotanusSharedModule,
     TabViewModule,
   ]
 })

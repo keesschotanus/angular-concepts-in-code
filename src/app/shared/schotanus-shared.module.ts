@@ -12,6 +12,6 @@ import { RomanPipe } from "./pipes/roman.pipe";
   ]
 
 })
-export class JosefSharedModule {
+export class SchotanusSharedModule {
 
 }

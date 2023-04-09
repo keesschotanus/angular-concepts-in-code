@@ -21,7 +21,7 @@ export class ModuleSourceComponent {
   import { CommonModule } from "@angular/common";
   import { NgModule } from "@angular/core";
   
-  import { JosefSharedModule } from "app/shared/josef-shared.module";
+  import { SchotanusSharedModule } from "app/shared/schotanus-shared.module";
   import { TabViewModule } from "primeng/tabview";
   
   import { ModuleComponent } from "app/module/module.component";
@@ -44,7 +44,7 @@ export class ModuleSourceComponent {
     imports: [
       CommonModule,
       FeatureRoutingModule,
-      JosefSharedModule,
+      SchotanusSharedModule,
       TabViewModule,
     ]
   })
@@ -98,7 +98,7 @@ export class ModuleSourceComponent {
     ]
   
   })
-  export class JosefSharedModule {
+  export class SchotanusSharedModule {
   
   }`;
 }

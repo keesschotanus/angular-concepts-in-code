@@ -46,7 +46,7 @@
       You can also create a new NgModule that exports and includes RomanPipe then import that NgModule in FeatureModule and AppModule.
     </p>
     <p>
-      I took the latter approach and created a new JosefSharedModule that exports the RomanPipe.
+      I took the latter approach and created a new SchotanusSharedModule that exports the RomanPipe.
       Both app.module.ts and feature.module.ts import the RomanPipe.
     </p>
   </p-tabPanel>
@@ -59,7 +59,7 @@
   <p-tabPanel header="feature-routing.module.ts">
     <pre><code class="prettyprint">{{ featureRoutingModuleSource }}</code></pre>
   </p-tabPanel>
-  <p-tabPanel header="josef-shared.module.ts">
+  <p-tabPanel header="schotanus-shared.module.ts">
     <pre><code class="prettyprint">{{ sharedModuleSource }}</code></pre>
   </p-tabPanel>
 </p-tabView>

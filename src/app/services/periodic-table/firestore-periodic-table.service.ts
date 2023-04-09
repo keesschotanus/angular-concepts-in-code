@@ -20,7 +20,7 @@ export class FirestorePeriodicTableService {
   private url = "https://firestore.googleapis.com/v1beta1/projects/josef-demo-web-angular/databases/(default)/documents/";
 
   /**
-   * Name of the colelction we are maintainig.
+   * Name of the collection we are maintaining.
    */
   private collection = "elements";
 

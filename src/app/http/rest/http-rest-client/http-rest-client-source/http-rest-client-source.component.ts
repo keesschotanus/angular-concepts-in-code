@@ -205,10 +205,10 @@ export class HttpRestClientSourceComponent {
     /**
      * URL for Google's Cloud Firestore REST api.
      */
-    private url = "https://firestore.googleapis.com/v1beta1/projects/josef-demo-web-angular/databases/(default)/documents/";
+    private url = "https://firestore.googleapis.com/v1beta1/projects/schotanus-demo-web-angular/databases/(default)/documents/";
   
     /**
-     * Name of the colelction we are maintainig.
+     * Name of the collection we are maintaining.
      */
     private collection = "elements";
   
@@ -218,7 +218,7 @@ export class HttpRestClientSourceComponent {
     private key = "AIzaSyBgEJPDeTlUXDwgOUpu1SAS2ch72ZVSK2k";
   
     /**
-     * Cosntructs this service from the supplied http client.
+     * Constructs this service from the supplied http client.
      * @param http HTTP client.
      */
     constructor(private http: Http) {
