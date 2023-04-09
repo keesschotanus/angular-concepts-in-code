@@ -27,8 +27,8 @@ export class FirestorePeriodicTableService {
   /**
    * Private key to use Google's REST API.
    */
-  private key = "AIzaSyBgEJPDeTlUXDwgOUpu1SAS2ch72ZVSK2k";
-  
+  private key = "Your-private-key";
+    
 
   /**
    * Cosntructs this service from the supplied http client.

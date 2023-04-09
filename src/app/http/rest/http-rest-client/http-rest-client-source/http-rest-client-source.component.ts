@@ -215,7 +215,7 @@ export class HttpRestClientSourceComponent {
   /**
    * Private key to use Google's REST API.
    */
-    private key = "AIzaSyBgEJPDeTlUXDwgOUpu1SAS2ch72ZVSK2k";
+    private key = "Your-private-key";
   
     /**
      * Constructs this service from the supplied http client.
