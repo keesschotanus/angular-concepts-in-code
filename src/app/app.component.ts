@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
     [
       {
         label: 'Home',
-        icon: 'fa-home',
+        icon: 'fa fa-home',
         routerLink: [ {outlets: { main: ['home'], source: null} } ] 
       },
       {
