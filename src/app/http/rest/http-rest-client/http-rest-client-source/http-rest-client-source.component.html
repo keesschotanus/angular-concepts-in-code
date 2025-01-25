@@ -3,7 +3,7 @@
     <h1>HTTP Client</h1>
     <p>
       Angular's HTTP client allows you to execute all the HTTP methods, like DELETE, GET, POST, PUT and PATCH.
-      Pay special attention to the firestore-periodic-table.service.ts file and http-rest-client.component.ts.
+      Pay special attention to the periodic-table.service.ts file and http-rest-client.component.ts.
       The former actually uses the HTTP client while the latter subscribes to the response.
     </p>
 
@@ -15,10 +15,7 @@
     </p>
 
     <p>
-      Note: This example uses Google's Cloud Firestore database.
-      The nice thing about this is that I can demonstrate my code everywhere since the database is always up and running.
-      The down side is that this database uses documents instead of javascript objects.
-      Other interfaces solve this problem but I wanted to use the REST interface in combination with the HTTP client.
+      Note: This example uses NodeJS' express server.
     </p>
   </p-tabPanel>
   <p-tabPanel header="http-rest-client.component.ts">
@@ -27,7 +24,7 @@
   <p-tabPanel header="http-rest-client.component.html">
     <pre><code class="prettyprint linenums">{{ htmlSource }}</code></pre>
   </p-tabPanel>
-  <p-tabPanel header="firestore-periodic-table.service.ts">
+  <p-tabPanel header="periodic-table.service.ts">
     <pre><code class="prettyprint linenums">{{ serviceSource }}</code></pre>
   </p-tabPanel>
   <p-tabPanel header="periodic-table-element.ts">

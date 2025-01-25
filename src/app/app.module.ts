@@ -98,7 +98,7 @@ import { LoggingSourceComponent } from './services/logging/logging-source/loggin
 import { LoggingService } from './shared/services/logging/logging.service';
 
 /* Periodic Table */
-import { FirestorePeriodicTableService } from './services/periodic-table/firestore-periodic-table.service';
+import { PeriodicTableService } from './services/periodic-table/periodic-table.service';
 
 /* @ViewChild */
 import { ViewChildComponent } from './view-child/view-child.component';
@@ -166,7 +166,6 @@ import { ObservableSourceComponent } from './observable/observable-source/observ
     HelloWorldAngularComponent,
     HelloWorldAngularSourceComponent,
     HomeComponent,
-    HttpRestClientComponent,
     HttpRestClientSourceComponent,
     InputOutputBindingComponent,
     InputOutputBindingChildComponent,
@@ -217,7 +216,7 @@ import { ObservableSourceComponent } from './observable/observable-source/observ
     SpinnerModule,
     TabViewModule
   ],
-  providers: [LoggingService, FirestorePeriodicTableService],
+  providers: [LoggingService, PeriodicTableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

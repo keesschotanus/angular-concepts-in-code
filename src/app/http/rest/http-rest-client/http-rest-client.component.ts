@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpResponse } from '@angular/common/http';
 
-import { FirestorePeriodicTableService } from '../../../services/periodic-table/firestore-periodic-table.service';
+import { PeriodicTableService } from '../../../services/periodic-table/periodic-table.service';
 import { PeriodicTableElement } from '../../../services/periodic-table/periodic-table-element';
 
 /**
  * Demonstrates how to use the HTTP client.
- * The actual usage of the HTTP client is present in the FirestorePeriodicTableService.
- * Here we just subscribe to the FirestorePeriodicTableService to create, read and update elements.
+ * The actual usage of the HTTP client is present in the PeriodicTableService.
  */
 @Component({
   selector: 'app-http-rest-client',
@@ -32,10 +31,10 @@ export class HttpRestClientComponent implements OnInit {
   httpErrorCode!: string;
 
   /**
-   * Construtcs this component from the supplied periodicTableService.
-   * @param periodicTableService The Periodic Table Service that uses Cloud Firestore.
+   * Constructs this component from the supplied periodicTableService.
+   * @param periodicTableService The Periodic Table Service that uses NodeJS.
    */
-  constructor(private periodicTableService: FirestorePeriodicTableService) { }
+  constructor(private periodicTableService: PeriodicTableService) { }
   
   /**
    * Creates the element form.

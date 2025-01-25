@@ -6,13 +6,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { PeriodicTableElement } from '../periodic-table/periodic-table-element';
+import { PeriodicTableElement } from './periodic-table-element';
 
 /**
- * Periodic Table Service using Google's Cloud Firestore REST API.
+ * Periodic Table Service.
  */
 @Injectable()
-export class FirestorePeriodicTableService {
+export class PeriodicTableService {
 
   /**
    * URL for Google's Cloud Firestore REST api.
@@ -31,7 +31,7 @@ export class FirestorePeriodicTableService {
     
 
   /**
-   * Cosntructs this service from the supplied http client.
+   * Constructs this service from the supplied http client.
    * @param http HTTP client.
    */
   constructor(private http: HttpClient) {
